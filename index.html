@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2048(made by Danilka)</title>
+        <meta charset="utf-8">
+        <link href="css/mycss.css" rel="stylesheet">
+    </head>
+    <body>
+        
+        <div id="main">
+            
+            <div id="field">
+                
+                <div id="placeOrient"></div>
+
+                <div id="t11" class="tokenShadow"></div>
+                <div id="t21" class="tokenShadow"></div>
+                <div id="t31" class="tokenShadow"></div>
+                <div id="t41" class="tokenShadow"></div>
+
+                <div id="t12" class="tokenShadow"></div>
+                <div id="t22" class="tokenShadow"></div>
+                <div id="t32" class="tokenShadow"></div>
+                <div id="t42" class="tokenShadow"></div>
+
+                <div id="t13" class="tokenShadow"></div>
+                <div id="t23" class="tokenShadow"></div>
+                <div id="t33" class="tokenShadow"></div>
+                <div id="t43" class="tokenShadow"></div>
+
+                <div id="t14" class="tokenShadow"></div>
+                <div id="t24" class="tokenShadow"></div>
+                <div id="t34" class="tokenShadow"></div>
+                <div id="t44" class="tokenShadow"></div>
+
+            </div>
+            <div id="start">NEW GAME</div>
+            <div id="labelScore">SCORE:</div>
+            <div id="score"></div>
+            
+            <div id="labelRecord">RECORD:</div>
+            <div id="record"></div>
+            <!--HOW TO PLAY: Use your arrow keys to move the tiles. When two tiles with the same number touch, they merge into one! -->
+            <div id="rules"><p>КАК ИГРАТЬ: Используйте стрелки на клавиатуре, чтобы передвигать фишки. Когда две фишки с одинаковым числом соприкоснутся, они сольются одна с другой!</p></div>
+            <fieldset id="sett">
+                <legend>Settings</legend>
+                <label for="audioRange">Громкость звука</label><br>
+                <input id="audioRange" type="range" step="0.01" min="0" max="1">
+                <br>
+                <label for="musicRange">Громкость музыки</label><br>
+                <input id="musicRange" type="range" step="0.01" min="0" max="1">
+            </fieldset>
+        </div>
+        <!--<div id="log"></div>-->
+        <script src="js/JQuery/jquery-3.2.1.min.js"></script>
+        <script src="js/myjs.js"></script>
+    </body>
+</html>
