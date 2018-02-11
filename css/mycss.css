@@ -9,32 +9,51 @@ body{
 
 #field{
     background-color: gray;
-    position: absolute;
+    position: relative;
     height: 330px;
     width: 330px;
-    top: 20px;
-    left: 20px;
+    /* top: 20px;
+    left: 20px; */
     border-radius: 5%;
+    margin: 1rem auto;
+}
+
+#main>h1{
+    color: rgb(102, 100, 237);
+    font-size: 6rem;
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 2rem;
+    margin: 1rem 0;
+    margin-left: calc(0.7em / 2);
 }
 
 #main{
-    position: absolute;
+    position: relative;
     /*width: 370px;*/
-    width: 840px;
-    height: 400px;
+    /* width: 840px; */
+    min-width: 350px;
+    /* height: 400px; */
+    min-height: 350px;
     background-color: darksalmon;
-    top: 10%;
-    left: 10%;
+    /* top: 10%;
+    left: 10%; */
+    margin: 1rem 20%;
     border: 2px solid aqua;
     /*border-radius: 15%/11%;*/
     /*font-family: cursive;*/
     font-family: 'Fredoka One', cursive;
 }
 
+#wrapper{
+    position: relative;
+    text-align: center;
+}
+
 #start{
     background-color: lightblue;
     color: green;
-    position: absolute;
+    position: relative;
     width: 185px;
     height: 50px;
     line-height: 50px;
@@ -44,8 +63,8 @@ body{
     font-weight: 400;
     border: 2px outset #e68362;
     border-radius: 10%/20%;
-    left: 370px;
-    top: 140px;
+    /* left: 370px;
+    top: 140px; */
     cursor: pointer;
     user-select: none;
 }
@@ -56,14 +75,17 @@ body{
 }
 
 #labelScore{
-    position: absolute;
-    top: 20px;
+    display: inline-block;
+    position: relative;
+    /* top: 20px; */
     /*left: 160px;*/
-    left: 370px;
+    /* left: 370px; */
+/* 
     height: 50px;
     width: 70px;
-    line-height: 50px;
-    text-align: center;
+    line-height: 50px; 
+    text-align: center;*/
+
     font-size: 1rem;
     /* font-weight: bold; */
     font-weight: 400;
@@ -72,15 +94,18 @@ body{
 }
 
 #labelRecord{
-    position: absolute;
+    display: inline-block;
+    position: relative;
     /*top: 420px;
     left: 160px;*/
-    top: 80px;
-    left: 370px;
-    height: 50px;
+    /* top: 80px;
+    left: 370px; */
+
+    /* height: 50px;
     width: 70px;
     line-height: 50px;
-    text-align: center;
+    text-align: center; */
+
     font-size: 1rem;
     /* font-weight: bold; */
     font-weight: 400;
@@ -89,13 +114,14 @@ body{
 }
 
 #record{
-    width: 105px;
-    height: 30px;
-    position: absolute;
-    top: 80px;
-    left: 450px;
-    line-height: 30px;
-    text-align: center;
+    display: inline-block;
+    /* width: 105px;
+    height: 30px; */
+    position: relative;
+    /* top: 80px;
+    left: 450px; */
+    /* line-height: 30px; */
+    /* text-align: center; */
     font-size: 1.1rem;
     /* font-weight: bold; */
     font-weight: 400;
@@ -108,13 +134,14 @@ body{
 }
 
 #score{
-    width: 105px;
-    height: 30px;
-    position: absolute;
-    top: 20px;
-    left: 450px;
-    line-height: 30px;
-    text-align: center;
+    display: inline-block;
+    /* width: 105px;
+    height: 30px; */
+    position: relative;
+    /* top: 20px;
+    left: 450px; */
+    /* line-height: 30px; */
+    /* text-align: center; */
     font-size: 1.1rem;
     /* font-weight: bold; */
     font-weight: 400;
@@ -127,9 +154,9 @@ body{
 }
 
 #sett{
-    position: absolute;
-    top: 20px;
-    left: 570px;
+    position: relative;
+    /* top: 20px;
+    left: 570px; */
     width: 124px;
     height: 155px;
     border-radius: 10%;
@@ -143,9 +170,9 @@ body{
 
 #rules{
     border: 3px inset #e68362;
-    position: absolute;
-    top: 210px;
-    left: 370px;
+    position: relative;
+    /* top: 210px;
+    left: 370px; */
     width: 355px;
     border-radius: 15%/35%;
 }
