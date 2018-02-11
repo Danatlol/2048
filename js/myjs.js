@@ -598,11 +598,14 @@ $(function(){
     
     var audioRange = $("#audioRange");
     
+    // use localStorage to set audio volume
     if(localStorage.audioVol === undefined){
         localStorage.audioVol = "0.25";
     }
     audioRange.val(localStorage.audioVol);
     
+    /*
+    // use localStorage to set music volume
     if(localStorage.musicVol === undefined){
         localStorage.musicVol = "0.25";
     }
@@ -613,9 +616,12 @@ $(function(){
     musicSound.volume = localStorage.musicVol;
     musicSound.loop = true;
     musicSound.play();
-    
+    */
     
     function playSound(filename){
+        if(filename === undefined){
+            return;
+        }
         temp = new Audio("sounds/" + filename);
         temp.volume = audioRange.val();
         temp.play();
@@ -625,11 +631,11 @@ $(function(){
     
     
     
-    var genSoundFileName = "gen.wav";
-    var moveSoundFileName = "empty.wav";
-    var startGameSoundFileName = "empty.wav";
-    var endGameSoundFileName = "empty.wav";
-    var raiseSoundFileName = "empty.wav";
+    var genSoundFileName = "";
+    var moveSoundFileName = "move.mp3";
+    var startGameSoundFileName = "start.mp3";
+    var endGameSoundFileName = "end.mp3";
+    var raiseSoundFileName = "";
 
     var strColors = [
         "rgb(250, 200, 0)","rgb(200, 100, 100)","rgb(100, 100, 200)", 

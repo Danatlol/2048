@@ -27,7 +27,8 @@ body{
     left: 10%;
     border: 2px solid aqua;
     /*border-radius: 15%/11%;*/
-    font-family: cursive;
+    /*font-family: cursive;*/
+    font-family: 'Fredoka One', cursive;
 }
 
 #start{
@@ -39,7 +40,8 @@ body{
     line-height: 50px;
     text-align: center;
     font-size: 1.1rem;
-    font-weight: bold;
+    /* font-weight: bold; */
+    font-weight: 400;
     border: 2px outset #e68362;
     border-radius: 10%/20%;
     left: 370px;
@@ -63,7 +65,8 @@ body{
     line-height: 50px;
     text-align: center;
     font-size: 1rem;
-    font-weight: bold;
+    /* font-weight: bold; */
+    font-weight: 400;
     user-select: none;
     cursor: default;
 }
@@ -79,7 +82,8 @@ body{
     line-height: 50px;
     text-align: center;
     font-size: 1rem;
-    font-weight: bold;
+    /* font-weight: bold; */
+    font-weight: 400;
     user-select: none;
     cursor: default;
 }
@@ -93,7 +97,8 @@ body{
     line-height: 30px;
     text-align: center;
     font-size: 1.1rem;
-    font-weight: bold;
+    /* font-weight: bold; */
+    font-weight: 400;
     border: 2px outset #e68362;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -111,7 +116,8 @@ body{
     line-height: 30px;
     text-align: center;
     font-size: 1.1rem;
-    font-weight: bold;
+    /* font-weight: bold; */
+    font-weight: 400;
     border: 2px inset #e68362;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -157,10 +163,10 @@ body{
     height: 70px;
     width: 70px;
     border-radius: 10%;
-    text-align: center;
+    /* text-align: center;
     line-height: 70px;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 2rem; */
     z-index: 1;
 }
 
@@ -173,7 +179,7 @@ body{
     border-radius: 10%;
     text-align: center;
     line-height: 70px;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 3.2rem;
     z-index: 1;
     transform: rotateY(0);
