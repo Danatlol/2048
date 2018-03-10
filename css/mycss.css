@@ -1,3 +1,8 @@
+
+
+
+
+
 body,html{
     margin: 0;
     padding: 0;
@@ -12,10 +17,22 @@ body{
     position: relative;
     height: 330px;
     width: 330px;
-    /* top: 20px;
-    left: 20px; */
     border-radius: 5%;
     margin: 1rem auto;
+    box-shadow: 0 0 10px yellow;
+    animation: colors 1s infinite linear;
+}
+
+.anim-colors{
+    animation: colors 0.5s infinite linear;
+}
+
+@keyframes colors{
+    0% {box-shadow: 0 0 10px yellow}
+    25% {box-shadow: 0 0 20px yellowgreen}
+    50% {box-shadow: 0 0 40px yellow}
+    75% {box-shadow: 0 0 20px yellowgreen}
+    100% {box-shadow: 0 0 10px yellow}
 }
 
 #main>h1{
@@ -23,26 +40,17 @@ body{
     font-size: 6rem;
     text-align: center;
     font-family: 'Fredoka One', cursive;
-    letter-spacing: 2rem;
-    margin: 1rem 0;
-    margin-left: calc(0.7em / 2);
+    letter-spacing: 0.3rem;
+    margin: 1rem;
 }
 
 #main{
     position: relative;
-    /*width: 370px;*/
-    /* width: 840px; */
-    min-width: 350px;
-    /* height: 400px; */
-    min-height: 350px;
     background-color: darksalmon;
-    /* top: 10%;
-    left: 10%; */
-    margin: 1rem 20%;
-    border: 2px solid aqua;
-    /*border-radius: 15%/11%;*/
-    /*font-family: cursive;*/
+    margin: 10px auto;
+    /* border: 1px solid aqua; */
     font-family: 'Fredoka One', cursive;
+    max-width: 350px;
 }
 
 #wrapper{
@@ -52,21 +60,19 @@ body{
 
 #start{
     background-color: lightblue;
-    color: green;
+    color: rgb(102, 100, 237);
     position: relative;
     width: 185px;
     height: 50px;
     line-height: 50px;
     text-align: center;
     font-size: 1.1rem;
-    /* font-weight: bold; */
     font-weight: 400;
     border: 2px outset #e68362;
     border-radius: 10%/20%;
-    /* left: 370px;
-    top: 140px; */
     cursor: pointer;
     user-select: none;
+    margin: 10px auto;
 }
 
 #start:active{
@@ -75,93 +81,43 @@ body{
 }
 
 #labelScore{
-    display: inline-block;
     position: relative;
-    /* top: 20px; */
-    /*left: 160px;*/
-    /* left: 370px; */
-/* 
-    height: 50px;
-    width: 70px;
-    line-height: 50px; 
-    text-align: center;*/
-
     font-size: 1rem;
-    /* font-weight: bold; */
     font-weight: 400;
     user-select: none;
     cursor: default;
 }
 
 #labelRecord{
-    display: inline-block;
     position: relative;
-    /*top: 420px;
-    left: 160px;*/
-    /* top: 80px;
-    left: 370px; */
-
-    /* height: 50px;
-    width: 70px;
-    line-height: 50px;
-    text-align: center; */
-
     font-size: 1rem;
-    /* font-weight: bold; */
     font-weight: 400;
     user-select: none;
     cursor: default;
 }
 
 #record{
-    display: inline-block;
-    /* width: 105px;
-    height: 30px; */
     position: relative;
-    /* top: 80px;
-    left: 450px; */
-    /* line-height: 30px; */
-    /* text-align: center; */
     font-size: 1.1rem;
-    /* font-weight: bold; */
     font-weight: 400;
-    border: 2px outset #e68362;
-    margin-top: 10px;
-    margin-bottom: 10px;
     user-select: none;
     cursor: default;
-    border-radius: 10%/35%;
 }
 
 #score{
-    display: inline-block;
-    /* width: 105px;
-    height: 30px; */
     position: relative;
-    /* top: 20px;
-    left: 450px; */
-    /* line-height: 30px; */
-    /* text-align: center; */
     font-size: 1.1rem;
-    /* font-weight: bold; */
     font-weight: 400;
-    border: 2px inset #e68362;
-    margin-top: 10px;
-    margin-bottom: 10px;
     user-select: none;
     cursor: default;
-    border-radius: 10%/35%;
 }
 
 #sett{
     position: relative;
-    /* top: 20px;
-    left: 570px; */
-    width: 124px;
-    height: 155px;
-    border-radius: 10%;
+    border-radius: 50%;
     border-style: inset;
     border-color: #e68362;
+    margin: 10px 4px;
 }
 
 #audioRange{
@@ -171,9 +127,7 @@ body{
 #rules{
     border: 3px inset #e68362;
     position: relative;
-    /* top: 210px;
-    left: 370px; */
-    width: 355px;
+    margin: 10px 4px;
     border-radius: 15%/35%;
 }
 
@@ -190,10 +144,6 @@ body{
     height: 70px;
     width: 70px;
     border-radius: 10%;
-    /* text-align: center;
-    line-height: 70px;
-    font-weight: bold;
-    font-size: 2rem; */
     z-index: 1;
 }
 
@@ -346,11 +296,6 @@ body{
     user-select: none;
     cursor: default;
 }
-
-
-
-
-
 
 
 
