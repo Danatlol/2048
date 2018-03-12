@@ -129,8 +129,6 @@ body{
 #rules{
     border: 1px solid yellow;
     border-radius: 10%/15%;
-    /* border: 3px inset #e68362; */
-    /* border-radius: 15%/35%; */
     position: relative;
     margin: 10px 24px;
 }

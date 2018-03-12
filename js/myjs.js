@@ -519,7 +519,7 @@ $(function () {
         localStorage.audioVol = "0.3";
     }
 
-    if(localStorage.audioVol === "0"){
+    if (localStorage.audioVol === "0") {
         audioRange.checked = false;
     }
 
@@ -714,7 +714,7 @@ $(function () {
         if (eve.key === "Enter" && !test.isPlaying) {
             test.startNewGame();
         }
-        else if(eve.key.substring(0, 5) === "Arrow"){
+        else if (eve.key.substring(0, 5) === "Arrow") {
             eve.preventDefault();
             test.makeTurn(eve.key.substring(5));
         }
@@ -727,7 +727,7 @@ $(function () {
     audioRange.addEventListener("change", function (eve) {
         // eve.target.blur();
         localStorage.audioVol = (this.checked) ? 0.3 : 0;
-        
+
     });
 
 
@@ -739,34 +739,34 @@ $(function () {
     var initialPoint;
     var finalPoint;
     document.getElementById("field").addEventListener('touchstart', function (event) {
-        event.preventDefault();
-        event.stopPropagation();
+        if (test.isPlaying) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
         initialPoint = event.changedTouches[0];
     }, false);
     document.getElementById("field").addEventListener('touchend', function (event) {
-        event.preventDefault();
-        event.stopPropagation();
+        if (test.isPlaying) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
         finalPoint = event.changedTouches[0];
         var xAbs = Math.abs(initialPoint.pageX - finalPoint.pageX);
         var yAbs = Math.abs(initialPoint.pageY - finalPoint.pageY);
         if (xAbs > 20 || yAbs > 20) {
             if (xAbs > yAbs) {
                 if (finalPoint.pageX < initialPoint.pageX) {
-                    // console.log("left");
                     test.makeTurn("left");
                 }
                 else {
-                    // console.log("right");
                     test.makeTurn("right");
                 }
             }
             else {
                 if (finalPoint.pageY < initialPoint.pageY) {
-                    // console.log("up");
                     test.makeTurn("up");
                 }
                 else {
-                    // console.log("down");
                     test.makeTurn("down");
                 }
             }
