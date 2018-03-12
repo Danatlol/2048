@@ -507,38 +507,30 @@ $(function () {
     var place = $("#placeOrient");
     var tokenCol = [];
     var speed = 100;
-    var tokenSide = 70;
-    var tokenMargin = 10;
+    var tokenSide = 60;
+    var tokenMargin = 8;
 
 
-    var audioRange = $("#audioRange");
+    // var audioRange = $("#audioRange");
+    var audioRange = document.getElementById("audioRange");
 
-    // use localStorage to set audio volume
+    // use localStorage to set audio
     if (localStorage.audioVol === undefined) {
-        localStorage.audioVol = "0.25";
+        localStorage.audioVol = "0.3";
     }
-    audioRange.val(localStorage.audioVol);
 
-    /*
-    // use localStorage to set music volume
-    if(localStorage.musicVol === undefined){
-        localStorage.musicVol = "0.25";
+    if(localStorage.audioVol === "0"){
+        audioRange.checked = false;
     }
-    $("#musicRange").val(localStorage.musicVol);
-    
-    
-    var musicSound = new Audio("sounds/music.wav");
-    musicSound.volume = localStorage.musicVol;
-    musicSound.loop = true;
-    musicSound.play();
-    */
 
+
+    // play sound function
     function playSound(filename) {
-        if (filename === undefined) {
+        if (filename == undefined || filename === "") {
             return;
         }
         var temp = new Audio("sounds/" + filename);
-        temp.volume = audioRange.val();
+        temp.volume = localStorage.audioVol;
         temp.play();
     }
 
@@ -567,10 +559,8 @@ $(function () {
     }
 
     test.onTokenGenerated = function () {
-
         //draw the generating token
         appendToken(0, speed);
-        //new Audio(genSoundFileName).play();
         playSound(genSoundFileName);
     };
 
@@ -651,22 +641,22 @@ $(function () {
 
             //if-block for font-size
             if (rais[i].value > 524288) {
-                tokenCol[indTokens[0]].tok.css("font-size", "1rem");
+                tokenCol[indTokens[0]].tok.css("font-size", "0.9rem");
             }
             else if (rais[i].value > 65536) {
-                tokenCol[indTokens[0]].tok.css("font-size", "1.1rem");
+                tokenCol[indTokens[0]].tok.css("font-size", "1rem");
             }
             else if (rais[i].value > 8192) {
-                tokenCol[indTokens[0]].tok.css("font-size", "1.3rem");
+                tokenCol[indTokens[0]].tok.css("font-size", "1.2rem");
             }
             else if (rais[i].value > 512) {
-                tokenCol[indTokens[0]].tok.css("font-size", "1.6rem");
+                tokenCol[indTokens[0]].tok.css("font-size", "1.5rem");
             }
             else if (rais[i].value > 64) {
-                tokenCol[indTokens[0]].tok.css("font-size", "2rem");
+                tokenCol[indTokens[0]].tok.css("font-size", "1.8rem");
             }
             else if (rais[i].value > 8) {
-                tokenCol[indTokens[0]].tok.css("font-size", "2.9rem");
+                tokenCol[indTokens[0]].tok.css("font-size", "2.7rem");
             }
 
 
@@ -721,11 +711,11 @@ $(function () {
 
 
     $("body").on("keydown", function (eve) {
-        //eve.preventDefault();
         if (eve.key === "Enter" && !test.isPlaying) {
             test.startNewGame();
         }
-        else {
+        else if(eve.key.substring(0, 5) === "Arrow"){
+            eve.preventDefault();
             test.makeTurn(eve.key.substring(5));
         }
     });
@@ -734,18 +724,10 @@ $(function () {
         test.startNewGame();
     });
 
-    $("#musicRange").on("change", function (eve) {
-        musicSound.volume = eve.target.value;
-        localStorage.musicVol = eve.target.value;
-    });
-
-    $("#musicRange").on("mouseup", function (eve) {
-        eve.target.blur();
-    });
-
-    audioRange.on("mouseup", function (eve) {
-        eve.target.blur();
-        localStorage.audioVol = eve.target.value;
+    audioRange.addEventListener("change", function (eve) {
+        // eve.target.blur();
+        localStorage.audioVol = (this.checked) ? 0.3 : 0;
+        
     });
 
 

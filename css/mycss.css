@@ -15,8 +15,8 @@ body{
 #field{
     background-color: gray;
     position: relative;
-    height: 330px;
-    width: 330px;
+    height: 280px;
+    width: 280px;
     border-radius: 5%;
     margin: 1rem auto;
     box-shadow: 0 0 10px yellow;
@@ -68,16 +68,19 @@ body{
     text-align: center;
     font-size: 1.1rem;
     font-weight: 400;
-    border: 2px outset #e68362;
     border-radius: 10%/20%;
     cursor: pointer;
     user-select: none;
     margin: 10px auto;
+    transition: transform 0.1s linear;
+}
+
+#start:hover{
+    box-shadow: 0 0 15px rgb(102, 100, 237);
 }
 
 #start:active{
-    border: 2px inset #e68362;
-    padding: 2px;
+    transform: scale(1.1);
 }
 
 #labelScore{
@@ -114,10 +117,9 @@ body{
 
 #sett{
     position: relative;
-    border-radius: 50%;
-    border-style: inset;
-    border-color: #e68362;
-    margin: 10px 4px;
+    border-color: yellow;
+    border-radius: 10%/30%;
+    margin: 10px 24px;
 }
 
 #audioRange{
@@ -125,10 +127,12 @@ body{
 }
 
 #rules{
-    border: 3px inset #e68362;
+    border: 1px solid yellow;
+    border-radius: 10%/15%;
+    /* border: 3px inset #e68362; */
+    /* border-radius: 15%/35%; */
     position: relative;
-    margin: 10px 4px;
-    border-radius: 15%/35%;
+    margin: 10px 24px;
 }
 
 #rules p{
@@ -137,12 +141,17 @@ body{
     text-align: center;
 }
 
+#authorInfo{
+    text-align: center;
+    font-weight: 200;
+}
+
 .tokenShadow{
     background-color: rgb(92, 117, 118);
     color: black;
     position: absolute;
-    height: 70px;
-    width: 70px;
+    height: 60px;
+    width: 60px;
     border-radius: 10%;
     z-index: 1;
 }
@@ -151,23 +160,111 @@ body{
     background-color: #27d4ba;
     color: black;
     position: absolute;
-    height: 70px;
-    width: 70px;
+    height: 60px;
+    width: 60px;
     border-radius: 10%;
     text-align: center;
-    line-height: 70px;
+    line-height: 60px;
     font-weight: 400;
-    font-size: 3.2rem;
+    font-size: 3.1rem;
     z-index: 1;
     transform: rotateY(0);
     transition-property: transform, background-color, font-size;
     transition-duration: 300ms;
+    user-select: none;
 }
 
 #placeOrient{
     position: absolute;
     z-index: 5;
 }
+
+#t11{
+    top: 8px;
+    left: 8px;
+}
+
+#t21{
+    top: 8px;
+    left: 76px;
+}
+
+#t31{
+    top: 8px;
+    left: 144px;
+}
+
+#t41{
+    top: 8px;
+    left: 211px;
+}
+
+
+
+#t12{
+    top: 76px;
+    left: 8px;
+}
+
+#t22{
+    top: 76px;
+    left: 76px;
+}
+
+#t32{
+    top: 76px;
+    left: 144px;
+}
+
+#t42{
+    top: 76px;
+    left: 211px;
+}
+
+
+
+#t13{
+    top: 144px;
+    left: 8px;
+}
+
+#t23{
+    top: 144px;
+    left: 76px;
+}
+
+#t33{
+    top: 144px;
+    left: 144px;
+}
+
+#t43{
+    top: 144px;
+    left: 211px;
+}
+
+
+
+#t14{
+    top: 211px;
+    left: 8px;
+}
+
+#t24{
+    top: 211px;
+    left: 76px;
+}
+
+#t34{
+    top: 211px;
+    left: 144px;
+}
+
+#t44{
+    top: 211px;
+    left: 211px;
+}
+/* 
 
 #t11{
     top: 10px;
@@ -253,7 +350,7 @@ body{
 #t44{
     top: 250px;
     left: 250px;
-}
+} */
 
 
 .gentoken{
@@ -282,8 +379,8 @@ body{
 
 .popUpFinalWindow{
     position: absolute;
-    height: 330px;
-    width: 330px;
+    height: 280px;
+    width: 280px;
     background-color: dimgray;
     opacity: 0;
     z-index: 100;

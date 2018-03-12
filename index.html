@@ -40,24 +40,25 @@
 
             </div>
             <div id="wrapper">
-                <div id="start">NEW GAME</div>
+                <div id="start">НОВАЯ ИГРА</div>
 
-                <div id="labelScore">SCORE: <span id="score"></span></div>
+                <div id="labelScore">ОЧКИ: <span id="score"></span></div>
                 
                 <!-- <br> -->
-                <div id="labelRecord">RECORD: <span id="record"></span></div>
+                <div id="labelRecord">РЕКОРД: <span id="record"></span></div>
                 
                 <!--HOW TO PLAY: Use your arrow keys to move the tiles. When two tiles with the same number touch, they merge into one! -->
                 <div id="rules"><p>КАК ИГРАТЬ: Используйте стрелки на клавиатуре, чтобы передвигать фишки. Когда две фишки с одинаковым числом соприкоснутся, они сольются одна с другой!</p></div>
                 <fieldset id="sett">
-                    <legend>Settings</legend>
-                    <label for="audioRange">Громкость звука</label><br>
-                    <input id="audioRange" type="range" step="0.01" min="0" max="1">
+                    <legend>Настройки</legend>
+                    <label for="audioRange">Звук включен:</label><br>
+                    <input id="audioRange" type="checkbox" checked>
                     <!-- <br>
                     <label for="musicRange">Громкость музыки</label><br>
                     <input id="musicRange" type="range" step="0.01" min="0" max="1"> -->
                 </fieldset>
             </div>
+            <footer id="authorInfo">Made by Danil Kuzminsky<address>danil.kuzminsky@gmail.com</address></footer>
         </div>
         <!--<div id="log"></div>-->
         <script src="js/JQuery/jquery-3.2.1.min.js"></script>
